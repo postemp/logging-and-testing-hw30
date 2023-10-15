@@ -42,4 +42,19 @@ public class ProcessArrayTests {
     public void hasRightArrayTests(int[] inArr, int[] outArr) {
         Assertions.assertArrayEquals(outArr,workingWithArrays.processArray(inArr));
     }
+
+    @Test
+    public void allAssertTests(){
+        Assertions.assertAll(
+                ()-> {
+                    Assertions.assertArrayEquals(new int[]{2,2},workingWithArrays.processArray(new int[]{2, 2, 1, 2, 2}));
+                },
+                ()-> {
+                    Assertions.assertArrayEquals(new int[]{2},workingWithArrays.processArray(new int[]{2, 2, 1, 2}));
+                },
+                ()-> {
+                    Assertions.assertThrows(RuntimeException.class, ()->workingWithArrays.processArray(new int[]{ 2, 2}));
+                }
+        );
+    }
 }
