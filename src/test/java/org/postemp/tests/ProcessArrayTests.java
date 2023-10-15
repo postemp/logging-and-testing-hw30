@@ -1,4 +1,4 @@
-package org.postemp.calculator.tests;
+package org.postemp.tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
